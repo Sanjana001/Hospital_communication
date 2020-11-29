@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dashboard</title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index1.css">
+        <script type="text/javascript" src="index.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="bg-modal">
+			<div class="model-content">
+				<h2 class="text-center font-weight-bold text-primary" style="cursor:pointer;text-decoration: underline;">Required Information</h2>
+				<p class="text-center" style="font-size: 20px;color: green;font-family:'brush script MT'">You are required to fill this form in order to get all information about your health from hospital</p>
+				<div class="screen">
+					<table style="font-size: 25px;width: 100%">
+						<tr><td class="text-left font-weight-bold" id="td">Enter your fullname:</td></tr>
+						<tr><td class="text-left font-weight-bold"><input type="text" id="name" style="width:90%" placeholder="Sanjana Sharma" required></td></tr>
+						<tr><td class="text-left font-weight-bold" id="td">Enter your Email Address:</td></tr>
+						<tr><td class="text-left font-weight-bold"><input type="email" id="email" style="width:90%" placeholder="sanjana@gmail.com" required></td></tr>
+						<tr><td class="text-left font-weight-bold" id="td">Password:</td></tr>
+						<tr><td class="text-left font-weight-bold"><input type="password" id="password" style="width:90%" placeholder="***********" required></td></tr>
+						<tr><td><input type="submit" class="submit btn btn-warning" onclick="fun()" value="Submit Button" style="margin-top: 30px;margin-left: 200px;text-shadow:2px 2px white;"></td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="div1" style="width:30%;">
+				<a href="home.html" class="text-left alert-link text-danger" style="font-family:cursive;">hospital.com</a>
+			</div>
+			<div class="div2">
+				<i class='fas fa-user-alt' id="icon"> <span id="wish" style="color: purple;font-family: cursive;"></span></i>
+			</div>
+			<div class="div3 text-right" style="padding-right: 30px;">
+				<a href=""><i class='fas fa-bell' id="icon1"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><i class='fas fa-home' id="icon1"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><i class='fas fa-portrait' id="icon1"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><i class='fas fa-edit' id="icon1"></i></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="div4" style="background-color: lightgrey;border-radius: 10px;">
+				<div style="background-color: yellow;height: 100px">
+					<i class='fas fa-user-alt' style="font-size: 35px;color: white;padding-top: 25px;margin-left: 30px;"> <span>Dashboard</span></i>
+				</div>
+				<a class="alert-link" href="profile.html" id="link">Profile</a><br>
+				<a class="alert-link" href="" id="link">Heath Report</a><br>
+				<a class="alert-link" href="" id="link">Prescription</a><br>
+				<a class="alert-link" href="" id="link">Appointment</a><br><br>
+				<button type="button" class="btn btn-info" id="btn">+Create Appointment</button>
+			</div>
+			<div class="div5" style="background-color: pink;margin-left: 2%"></div>
+		</div>
+	</body>
+</html>
