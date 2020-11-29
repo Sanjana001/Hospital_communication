@@ -71,3 +71,11 @@ body{
   #btn{margin-left: 65px;}
 }
 #link:hover{text-decoration: none;}
+#h2{font-size: 20px;}
+#p{font-size: 12px;}
+@media only screen and (min-width: 1400px) {
+  #h2{
+  	font-size: 30px;
+  }
+  #p{font-size: 18px;}
+}
