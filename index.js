@@ -16,7 +16,6 @@ function fun(){
 function check(){
     var str = info[email];
     var split = str.split(" ");
-    alert(split[0]+" "+split[1]);
     if(split[0]==name && split[1]==pass){
         document.querySelector('.bg-modal').style.display = 'none';
         fun1();
@@ -35,4 +34,5 @@ function fun1(){
     else str += "Good Evening";
     str += " "+name;
     document.getElementById("wish").innerHTML = str;
+    explanation();
 }
