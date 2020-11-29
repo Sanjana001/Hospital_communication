@@ -1,0 +1,26 @@
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.div1{
+	font-size: 18px;
+	padding-left: 15px;
+}
+@media only screen and (min-width: 1400px) {
+   .div1{
+	   padding-left: 30px;
+	   font-size: 35px;
+   }
+}
+.div2{width: 30%;}
+.div3{width: 40%;}
+#icon1{color: black;}
+@media only screen and (min-width: 1400px) {
+   #icon1{
+	   font-size: 30px;
+	   padding-top: 12px;
+	   padding-right: 30px;
+   }
+}
+#icon1:hover{color: green;}
