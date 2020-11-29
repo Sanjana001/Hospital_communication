@@ -24,3 +24,11 @@
    }
 }
 #icon1:hover{color: green;}
+#link{font-family: cursive;color: green;}
+#wish{font-weight: bold;}
+@media only screen and (min-width: 1400px) {
+   .list{
+	   font-size: 25px;
+	   margin-left: 50px;
+   }
+}
