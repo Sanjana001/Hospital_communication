@@ -32,3 +32,12 @@
 	   margin-left: 50px;
    }
 }
+#p1{color: blue;font-family: cursive;font-size: 20px;}
+#span{color: orange;}
+@media only screen and (min-width: 1400px) {
+   #p1{font-size: 25px;}
+}
+#btn1{margin-left: 25px;}
+@media only screen and (min-width: 1400px) {
+   #btn1{margin-left: 400px;font-size: 20px;}
+}
