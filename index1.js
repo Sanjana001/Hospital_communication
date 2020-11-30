@@ -4,17 +4,15 @@ var med_doc = ["Dr. Sourabh Kalra","Dr. Reeta Gupta","Dr. Santosh Singh","Dr. Ka
 var lung_doc = ["Dr.Harbans Verma","Dr. Arijit Singh","Dr. Kunal Malhotra"];
 var skin_doc = ["Dr. Shivani Verma","Dr. Inderjeet Singh", "Dr. Reetu Aggarwal"];
 var bone_doc = ["Dr. Harbans Walia","Dr. Satinder Singh","Dr. Gurjinder Singh","Dr. Satpal Aggarwal"];
-/*var headache = "Take any paracetamol like <b>Saridon or any other paracetamol which you can easily get from local stores. If you are having spectacles then check your eyesight also. After 1-2 days if you are still facing this problem then please consult with the <b>Medicinal Doctor</b>";
-var allergyic = "Take cetrizine anf if still having allergy after 1-2 day then please create your appointment with <b>Medicinal Doctor</b>"*/
 function explanation(){
-	document.getElementById("div5").innerHTML="<h2 class='text-center font-weight-bold' id='h2' style='color: fuchsia;text-shadow: 1px 2px blue'>About Dashboard</h2><p class='text-center' id='p'>If you are a new user and don't know how to use the dashboard then we are here to help you as a guide and mentor. Please follow the instructions if you want to know about dashboard.</p><ol class='list'><li>Go to the <b><em>Profile</em></b> option. If you see <span class='glyphicon'>&#xe014;</span> sign near the profile option it means you haven't create your complete profile. When you complete your profile you will see <span class='glyphicon glyphicon-ok'></span> sign near your profile option.</li><li><b><em>Prescription</em></b> option will prescribed you some medicines when you will be suffering from minor diseases.</li><li>In <b><em>Update</em></b> option you can see all the updates of the hospital.</li><li>You will be able to create your appointment by clicking on the <b><em>+Create Appointment</em></b> button.</li></ol>";
+	document.getElementById("div5").innerHTML="<h2 class='text-center font-weight-bold' id='h2' style='color: fuchsia;text-shadow: 1px 2px blue'>About Dashboard</h2><p class='text-center' id='p'>If you are a new user and don't know how to use the dashboard then we are here to help you as a guide and mentor. Please follow the instructions if you want to know about dashboard.</p><ol class='list'><li>Go to the <b><em>Profile</em></b> option. If you haven't create your complete profile or a new user then it will give you a form otherwise it will show you your's complete profile which you can edit also.</li><li><b><em>Online Doctor</em></b> option will prescribed you some medicines when you will be suffering from minor diseases.</li><li>In <b><em>Appointment</em></b> option you can see yours next appointment.</li><li>You will be able to create your appointment by clicking on the <b><em>+Create Appointment</em></b> button.</li></ol>";
 }
 function create(){
 	var str = "<h2 class='text-center font-weight-bold' id='h2' style='color: maroon;text-shadow: 2px 2px green;'>Create your Appointment</h2><br><div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Age: <span id='span'><input type='number' style='height: 30px;'></span></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Gender: <span id='span' style='color:black;font-weight: lighter'><input type='radio' value='male' id='gender' name='gender'> Male&nbsp;&nbsp;<input type='radio' value='female' name='gender' id='gender'> Female&nbsp;&nbsp;<input type='radio' value='others' name='gender' id='gender'> Others</span></p></div><div class='col-sm-1'></div></div>";
 	var str1 = "<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Select your desired timeslot: <span id='span'><select name='slot' id='slot'><option value='morning'>Morning (10:00am - 12:00pm)</option><option value='evening'>Evening (4:00pm - 7:00pm)</option></select></span></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Select your problem: <span id='span'><select name='problem' id='problem' style='width: 100%'><option value='skin'>Skin Related Problem (Skin Doctors)</option><option value='bones'>Arithiritius/Problems related to bones (Orthopedic Doctors)</option><option value='cough'>Cough/Cold/Fever/Headache/Migrane (Medicinal Doctors)</option><option value='gyno'>Pregnency related/ women's related (Gyno's)</option><option value='heart'>Heart related (Heart Doctors)</option><option value='ent'>Cough related (E.N.T Doctors)</option></select></span></p></div><div class='col-sm-1'></div></div>";
     var str2 = "<button type='button' class='btn' style='background-color: orange' id='btn1' onclick='appointment();'>+Create Appointment</button>";
-    var str5 = "<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p style='color: red' id='sslot'> : <span id='aslot' style='color: green'></span></p></div><div class='col-sm-5'><p style='color: red' id='dslot'> : <span id='daslot' style='color: green'></span></p></div><div class='col-sm-1'></div></div>";
-    document.getElementById("div5").innerHTML = str + str1 + str2+ str5;
+    var str5 = "<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p id='p1'>Choose a Date for Appointment: <input type='date' id='appt_date' name='date for appointment' value='2020-12-01' min='2020-12-04' max='2023-12-04'></p></div><div class='col-sm-5'><p style='color: red' id='dslot'></div><div class='col-sm-1'></div></div>";
+    document.getElementById("div5").innerHTML = str + str1 + str5+ str2;
 }
 function appointment(){
 	var str = "";
@@ -37,20 +35,22 @@ function online(){
 function survey(){
    alert("We have recorded your response. You will shortly get an email from our hospital site which will tell you about your selected symptoms and prescribe you the medicines also.")
 }
-function pass(){
-	var countDownDate = new Date("Jan 20, 2021 15:37:25").getTime();
-	var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 48));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("h3").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
-        if (distance < 0) {
-           clearInterval(x);
-           alert("Today is your appointment with the doctor");
-        }
+function appoint(){
+	var str = "<p id='p3'>Your next appointment is scheduled after: </p><h1 class='text-left font-weight-bold' id='h3'></h1>";
+    document.getElementById("div5").innerHTML = str;
+    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+    var x = setInterval(function() {
+       var now = new Date().getTime();
+       var distance = countDownDate - now;
+       var days = Math.floor(distance / (1000 * 60 * 60 * 48));
+       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+       document.getElementById("h3").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+       if (distance < 0) {
+          clearInterval(x);
+          alert("Today is your appointment with the doctor");
+       }
     }, 1000);
-    alert("This is just an example like how can you see the timings of your next. Because we don't have much of time so we have just explained you about the appointment option");
+    alert("This is just an example. As we don't have enough time to build its code so we have given an example how the appointment option will tell you about your next appointment.");
 }
