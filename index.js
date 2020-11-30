@@ -36,3 +36,22 @@ function fun1(){
     document.getElementById("wish").innerHTML = str;
     explanation();
 }
+function profile(){
+    if(info1[email]!=undefined) next();
+    else form();
+}
+function next(){
+    var split = info1[email].split("!");
+    var str= "<h2 class='text-center font-weight-bold' id='h2' style='text-shadow:2px 2px white;'>Profile</h2><div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Name: <span id='span'>"+ name + "</span></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Email: <span id='span'>"+email+"</span></p></div><div class='col-sm-1'></div></div>";
+    var str1="<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>State: <span id='span'>"+split[1]+"</span></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>City: <span id='span'>"+split[0]+"</span></p></div><div class='col-sm-1'></div></div>";
+    var str2="<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Postal Code: <span id='span'>"+split[2]+"</span></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Address: <span id='span'>"+split[3]+"</span></p></div><div class='col-sm-1'></div></div>";
+    var str3 = "<a class='alert-link text-dark' href='#header' style='margin-left: 80px;' onclick='form();'>Edit your profile?</a>";
+    document.getElementById("div5").innerHTML=str+str1+str2+str3;
+}
+function form(){
+    var str = "<h2 class='text-center font-weight-bold' id='h2' style='text-shadow:2px 2px white;'>Create your Profile</h2><br><div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Name: <span id='span'>"+name+"</span></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Email: <span id='span'>"+email+"</span></p></div><div class='col-sm-1'></div></div>";
+    var str2="<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>State: <input type='text' id='state' style='width: 65%;' required></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>City: <input type='text' id='city' style='width: 72%;' required></p></div><div class='col-sm-1'></div></div>";
+    var str3 = "<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Postal Code: <input type='text' id='code' style='width: 50%' required></p></div><div class='col-sm-5'><p class='text-left font-weight-bold' id='p1'>Address: <textarea id='add' style='width: 72%;' required></textarea></p></div><div class='col-sm-1'></div></div>";
+    var str4 = "<div class='row' style='margin-left:10px;margin-right:20px;'><div class='col-sm-1'></div><div class='col-sm-5'><button class='btn-dark text-center' style='font-size: 25px;' onclick='explanation();'>Save</button> </div></div>";
+    document.getElementById("div5").innerHTML=str+str2+str3+str4;
+}
