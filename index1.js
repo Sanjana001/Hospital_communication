@@ -37,3 +37,20 @@ function online(){
 function survey(){
    alert("We have recorded your response. You will shortly get an email from our hospital site which will tell you about your selected symptoms and prescribe you the medicines also.")
 }
+function pass(){
+	var countDownDate = new Date("Jan 20, 2021 15:37:25").getTime();
+	var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 48));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("h3").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+           clearInterval(x);
+           alert("Today is your appointment with the doctor");
+        }
+    }, 1000);
+    alert("This is just an example like how can you see the timings of your next. Because we don't have much of time so we have just explained you about the appointment option");
+}
