@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .hsimage{
+    height:500px;
+    width:700px;
+   }
+   .flexcontainer{
+    display:flex;
+    flex-direction:row;
+    
+
+}
+.pcontainer{
+    padding:1%; 
+    font-size:20px;
+    height:500px;
+    width:700px;
+    opacity:1;
+}
+@media(max-width:765px){
+    .flexcontainer{
+        display:block;
+    }
+}
+
+    </style>
+    <title>Hospital</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../create-appointment-section/style.css">
+    <script src="../javascript.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="flexcontainer">
+    <div class="pcontainer"><p>Your next appointment is scheduled after </p><p id="demo"></p> </div> 
+    <div class="hsimage">  <img src="booking.svg" alt="hospital image"></div>
+</div>
+<p id="demo"></p>
+<script>
+
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+   
+  var days = Math.floor(distance / (1000 * 60 * 60 * 48));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+ 
+  if (distance < 0) {
+    clearInterval(x);
+    alert("Today is your appointment with the doctor");
+  }
+}, 1000);
+</script>
+
+    
+</body>
+</html>

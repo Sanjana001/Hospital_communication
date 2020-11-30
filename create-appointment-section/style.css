@@ -1,0 +1,49 @@
+*{
+    margin:2%;
+    padding:0%;
+}
+.flexcontainer{
+    display:flex;
+    flex-direction:row;
+    
+
+}
+.form_container{
+   /* border:1px solid black;*/
+
+
+
+   
+  
+    padding:1%;
+   
+    font-size:20px;
+    height:500px;
+    width:700px;
+    opacity:1;
+}
+h1{
+  margin-left:5%;
+  color:#5593d3;
+}
+td{
+    padding-right:17px;
+}
+marquee{
+    margin:0%;
+}
+.doctor{
+    display:none;
+}
+.hsimage{
+  /*  border:1px solid black;*/
+    height:500px;
+    width:700px;
+}
+
+
+@media(max-width:765px){
+    .flexcontainer{
+        display:block;
+    }
+}
