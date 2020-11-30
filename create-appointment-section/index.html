@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hospital</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../create-appointment-section/style.css">
+    <script src="../javascript.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <marquee style="padding:0%; margin:0%;" behaviour="scroll" direction="left" scrollamount="10">
+        <span style="font-family: cursive; color: red;">Note:Exact timings for the appointment will be provided to the
+            patients via SMS on their registered mobille no. </span></marquee>
+    <h1>Make an Appointment</h1>
+    <div class="flexcontainer">
+
+        <div class="form_container">
+
+            <form>
+                <ol type="1">
+                    <li><label for="mode_of_communication">
+                            How would you like to speak with a practitioner?
+                        </label><br>
+                        <table>
+                            <tr>
+                                <td><input type="radio" id="mode_of_communication" name="communication" value="video">
+                                    Video</td>
+                                <td><input type="radio" id="mode_of_communication" name="communication" value="phone">
+                                    Phone</td>
+                                <td><input type="radio" id="mode_of_communication" name="communication" value="offline">
+                                    Offline</td>
+                            </tr>
+                        </table>
+                    </li>
+
+                    <li> <label for="appt_date">Choose a Date for Appointment: </label>
+                        <input type="date" id="appt_date" name="date for appointment" value="2020-12-01"
+                            min="2020-12-01" max="2020-12-31">
+                    </li>
+                    <li>
+                        <label for="time_slot">Your preferred time slot</label><br>
+                        <input type="radio" id="time_slot" name="time" value="morning"> Morning (9:00am to 12:00pm)<br>
+                        <input type="radio" id="time_slot" name="time" value="afternoon"> Afternoon (12:00pm to
+                        2:00pm)<br>
+                        <input type="radio" id="time_slot" name="time" value="evening"> Evening (3:00pm to 6:00pm)<br>
+                    </li>
+                    <li>
+                        <label for="department">Your concerned Department:</label>
+                        <select name="department" id="department">
+
+                            <option value="anatomy">Anatomy</option>
+                            <option value="dentistry">Dentistry</option>
+                            <option value="dermatology">Dermatology</option>
+                            <option value="ent">ENT</option>
+                            <option value="ophthalmology">Ophthalomology</option>
+                            <option value="gynaecology">Obstetrics and gynaecolgy</option>
+                            <option value="Paediatric-Surgery">Paediatric Surgery</option>
+                            <option value="pathology">Pathology</option>
+                            <option value="pharmacology">Pharmacology</option>
+                            <option value="physiology">Physiology</option>
+                        </select>
+                    </li>
+                    <input type="submit" value="submit" class="btn btn-primary">
+            </form>
+        </div>
+        <div class="hsimage">
+            <img src="booking.svg" alt="hospital image">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
