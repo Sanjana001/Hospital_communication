@@ -40,6 +40,50 @@
              	</ul>
              </div>
 		</header>
+		<div class="container-fluid" id="faq">
+			<h2 class="text-center font-weight-bold" id="h2" style="margin-top: 2%;padding-top: 2%;">Frequently Asked Questions</h2>
+        <div class="row">
+            <div id="section-text">
+            <div class="accordion">
+                <p class="accordion-title">what is Online patient portal?</p>
+                <div>
+                   <p class="accordion-text">A patient portal is a secure online website that gives you convenient 24-hour access to your personal health information. Patients can electronically access all their health treatments and their details using monitored dashboards provided by the hospital.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <p class="accordion-title">What can I do with a patient portal?</p>
+                <div>
+                    <p class="accordion-text">
+                    <ul id="ul">
+                       <li> Exchange secure emails with your
+                        health care team</li>
+                       <li> Schedule non-urgent/urgent appointments</li>
+                       <li>Get Information regarding your's appointed doctor</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <p class="accordion-title">How I can schedule an appointment with the doctor</p>
+                <div>
+                    <p class="accordion-text">Click on the CREATE AN ACCOUNT button provided on the hospital's website.Provide your informaition like Name and Email-id and set a password to create an account.<br>After that,a dashboard will be procvided to you through which you can create an appointment. </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <p class="accordion-title">What are some of the benefits of a patient portal? </p>
+                <div>
+                    <p class="accordion-text"> Patients benefit from more efficient and effective communication with providers as well as better and timelier self-care.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <p class="accordion-title">How do I get access to a patient portal?</p>
+                <div>
+                    <p class="accordion-text">Your health care providers can provide you with instructions to set up your account. There may be a couple of steps involved, including creating a secure password to make sure that only you have access to your health information.</p>
+                </div>
+            </div></div>
+            <div class="main"></div>
+        </div>
+    </div>
 		<footer id="contact">
 			<div class="container-fluid" style="background-color: black;">
 				<div class="row">
@@ -99,4 +143,22 @@
 			</div>
 		</footer>
 	</body>
+	    <script>
+        const accordion = document.querySelectorAll(".accordion");
+        accordion.forEach(a => {
+            a.addEventListener('click', () => {
+                if (a.className == "accordion active") {
+                    a.classList.remove('active')
+                } else {
+                    remove()
+                    a.classList.add('active')
+                }
+            })
+        });
+        function remove() {
+            accordion.forEach(a => {
+                a.classList.remove('active')
+            })
+        }
+    </script>
 </html>
